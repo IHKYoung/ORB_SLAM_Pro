@@ -1,0 +1,9 @@
+<launch>
+    <remap from="/mo_cam/imu_info" to="/imu_ZYF_info" />
+    <node pkg="orb_slam3" type="ros_rgbd_imu" name="ros_rgbd_imu"
+        args="$(find orb_slam3)/Vocabulary/ORBvoc.bin $(find orb_slam3)/METOAK/U60RGBDI.yaml"
+        output="screen">
+        <param name="trajectoryFileLocation" type="string" value="/home/young/vslam_ros/trajectory/" />
+        <param name="useViewer" type="bool" value="true" />
+    </node>
+</launch>

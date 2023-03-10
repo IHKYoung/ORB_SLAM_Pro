@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="orb_slam3" type="ros_stereo" name="ros_stereo"
+        args="$(find orb_slam3)/Vocabulary/ORBvoc.bin $(find orb_slam3)/METOAK/U60.yaml"
+        output="screen">
+        <param name="trajectoryFileLocation" type="string" value="/home/young/vslam_ros/trajectory/" />
+        <param name="useViewer" type="bool" value="true" />
+        <param name="logFileLocation" type="string" value="/home/young/vslam_ros/" />
+    </node>
+</launch>

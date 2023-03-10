@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="orb_slam3" type="ros_rgbd" name="ros_rgbd"
+        args="$(find orb_slam3)/Vocabulary/ORBvoc.bin $(find orb_slam3)/METOAK/U60RGBD_car.yaml true"
+        output="screen" >
+        <!-- launch-prefix="xterm -e gdb -/- args"> -->
+        <param name="trajectoryFileLocation" type="string" value="/home/wheeltec/vslam_ros/trajectory/" />
+    </node>
+</launch>   
